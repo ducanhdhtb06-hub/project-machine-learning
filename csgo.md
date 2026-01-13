@@ -1,18 +1,85 @@
-Built a classification model to predict CSGO match outcomes based on match statistics and contextual features.
+🎮 CSGO Match Result Prediction using Machine Learning
+📌 Project Overview
 
-Performed feature selection by removing time-based and non-informative attributes to improve model efficiency and focus.
+This project builds a classification model to predict the outcome of CSGO matches based on match statistics and contextual features.
 
-Designed a complete data preprocessing pipeline using Pipeline and ColumnTransformer to handle mixed feature types.
+🎯 Objective
 
-Applied missing value imputation using SimpleImputer (median strategy for numerical features, constant value for categorical features).
+Apply machine learning techniques to predict competitive game outcomes.
 
-Scaled numerical features with StandardScaler to ensure balanced feature contribution.
+Practice building a complete end-to-end classification pipeline with preprocessing and model tuning.
+
+Handle mixed data types and potential class imbalance.
+
+📊 Dataset
+
+Dataset: CSGO match statistics dataset
+
+Target variable: result
+
+Win / Loss
+
+Features:
+Match statistics, map information, team-related numerical features, and contextual attributes.
+
+⚙️ Methodology
+
+Removed time-based and non-informative features (date, time, ping, rounds, etc.) to improve model focus.
+
+Split the dataset into training and testing sets.
+
+Built a preprocessing pipeline using Pipeline and ColumnTransformer:
+
+Applied SimpleImputer (median strategy) for numerical features.
+
+Applied SimpleImputer (constant value) for categorical features.
+
+Scaled numerical features using StandardScaler.
+
 Encoded categorical feature (map) using OneHotEncoder.
 
-Trained a Random Forest Classifier and optimized hyperparameters using GridSearchCV with 6-fold cross-validation.
+Trained a Random Forest Classifier.
 
-Used precision_weighted as the evaluation metric to address potential class imbalance.
+Optimized hyperparameters using GridSearchCV with 6-fold cross-validation.
 
-Evaluated model performance using classification report (precision, recall, F1-score).
+Used precision_weighted as the evaluation metric to handle potential class imbalance.
 
-Gained hands-on experience in building an end-to-end Machine Learning classification pipeline, from preprocessing to model tuning and evaluation.
+Evaluated model performance using:
+
+Precision
+
+Recall
+
+F1-score
+
+Classification Report
+
+🧰 Technologies Used
+
+Python
+
+Pandas
+
+NumPy
+
+Scikit-learn
+
+▶️ How to Run
+pip install pandas numpy scikit-learn
+python main.py
+
+📈 Results
+
+The optimized Random Forest model achieved stable predictive performance.
+
+Weighted precision helped ensure balanced evaluation across match outcomes.
+
+Feature preprocessing significantly improved model robustness.
+
+📚 Key Learnings
+
+Learned how to design a machine learning pipeline for mixed data types.
+
+Gained experience in feature selection, preprocessing, and model optimization.
+
+Improved understanding of applying machine learning to game analytics and esports data.
